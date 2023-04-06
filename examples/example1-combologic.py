@@ -40,7 +40,7 @@ sum, carry_out = pyrtl.Output(1, 'sum'), pyrtl.Output(1, 'carry_out')
 sum <<= a ^ b ^ c
 
 # The carry_out bit would just be "carry_out <<= a & b | a & c | b & c" but let's break
-# than down a bit to see what is really happening.  What if we want to give names
+# that down a bit to see what is really happening.  What if we want to give names
 # to the partial signals in the middle of that computation?  When you take
 # "a & b" in PyRTL, what that really means is "make an AND gate, connect one input
 # to 'a' and the other to 'b' and return the result of the gate".  The result of
